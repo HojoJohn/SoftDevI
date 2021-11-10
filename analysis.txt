@@ -1,0 +1,21 @@
+book,library,patron,shelf,list,title,books_checked_out,books_wanted,catalog,author,
+
+
+book
+    *Title string
+    *author string
+    *copies int
+
+patron
+    *Id string
+    *name name
+    has list
+    want list
+
+catalog
+    title dict(key:title, value:book)
+    author dict(key:author, value:list of books)
+library
+    shelf list
+    patrons list
+    catalog cart_catalog
