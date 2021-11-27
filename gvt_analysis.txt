@@ -1,0 +1,28 @@
+goats,trolls,faction,cards,life,game,player,deck,hand,turns,scire,name,resource cost,rarity,attack power, Health
+
+
+Deck 
+    cards (llist of cards)
+    methods:
+     draw
+     shuffle
+Player 
+    faction (string) 
+    deck
+    hand
+    score
+    methods:
+     take turns
+
+
+faction 
+    trolls
+    goats
+
+cards
+    name
+    resoruce cost 
+    rarity
+    faction
+    attack
+    life

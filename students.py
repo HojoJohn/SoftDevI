@@ -25,17 +25,52 @@ class Student:
     A class that represents a student with fields for ID, name, credits, and
     GPA.
     """
-    __slots__ = ["id", "name", "credits", "gpa"]
+    __slots__ = ["__id", "__name", "__credits", "__gpa"]
 
     def __init__(self, id, name):
-        self.id = id
-        self.name = name
-        self.credits = 0
-        self.gpa = 0
+        self.__id = id
+        self.__name = name
+        self.__credits = 0
+        self.__gpa = 0
 
-def print_student(student):
-    """
+    def get_name(self):
+        return self.__name
+    def get_credit(self):
+        return self.__credits
+    def get_gpa(self):
+        return self.__gpa
+    def get_id(self):
+        return self.__id
+
+    def print_student(self):
+        """
     Prints a student's info to standard output.
     """
-    print("Student: ID=", student.id, ", name=", student.name, 
-        ", credits=", student.credits, ", GPA=", student.gpa, sep="")
+        print("Student: ID=",self.__id, ", name=", self.__name, 
+        ", credits=", self.__credits, ", GPA=", self.__gpa,sep="")
+    def add_course(self.course):
+        self.__course += [course]
+        self.__credits += course.get_credits()
+
+
+class Course:
+
+    __slots__ = [ '__name','__credits','__grades']
+
+    def __init__(self,name,credits,grades):
+
+        self.__name = name
+        self.__credits = credits
+        self.__grades = grades
+    
+    def get_name(self):
+        return self.__name
+
+    def get_credits(self):
+        return self.__credits
+    def get_grades(self):
+        return self.__grades
+
+    def print_courses(self):
+
+        print("Student Name:",self.get_name,"credtis=",self.get_credits,"grades=",self.get_grades)
