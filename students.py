@@ -48,9 +48,32 @@ class Student:
     """
         print("Student: ID=",self.__id, ", name=", self.__name, 
         ", credits=", self.__credits, ", GPA=", self.__gpa,sep="")
-    def add_course(self.course):
+
+    def make_student(id,name):
+        student = Student()
+        student.id = id
+        student.name = name
+        return student
+    def add_course(id,name):
+        student = make_student(id, name)
         self.__course += [course]
         self.__credits += course.get_credits()
+    def get_student(id,population):
+
+        if id in population:
+            student = population[id]
+            return student
+        else:
+            return None
+    
+    def get_credits(id,population):
+        student = get_student(id,population)
+        if student is not None:
+            return student.credits
+        else:
+            return None
+
+
 
 
 class Course:
@@ -72,5 +95,6 @@ class Course:
         return self.__grades
 
     def print_courses(self):
+        student1 = Student('456-DEF', 'Harris')
 
         print("Student Name:",self.get_name,"credtis=",self.get_credits,"grades=",self.get_grades)
