@@ -72,19 +72,35 @@ class Student:
             return student.credits
         else:
             return None
+    
+    def get_gpa(self):
+        total_quality_points = 0
+        total_credits = 0
+
+        for course in self.__courses:
+            total_credits += course.get_credits
+            total_quality_points += QUALITY_POINTS[course.get_grades()] * course.get_credits
+        
+        if total_credits == 0:
+            return 00
+
+        else:
+            return total_quality_points / total_credits
 
 
 
 
 class Course:
 
-    __slots__ = [ '__name','__credits','__grades']
+    __slots__ = [ '__id', '__name','__credits','__courses']
 
     def __init__(self,name,credits,grades):
-
+        self.__id = id
         self.__name = name
-        self.__credits = credits
-        self.__grades = grades
+        self.__credits = 0
+        self.__gpa = 0
+
+        self.__courses = []
     
     def get_name(self):
         return self.__name

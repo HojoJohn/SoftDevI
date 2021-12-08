@@ -10,17 +10,7 @@ class Superhero:
         self.power = power
         self.weapon = weapon
     
-    def get_name(self):
-        return self.name
     
-    def get_identity(self):
-        return self.identity
-    
-    def get_power(self):
-        return self.power
-    
-    def get_weapon(self):
-        return self.weapon
     
     def thor():
         super1 = Superhero
@@ -48,10 +38,9 @@ def main():
     print('Found Avenger Bio:')
     print(super1.name,'(',super1.identity,')',':')
     print('Abilities:')
-    print(super1.power)
-    
+    print("\t",super1.power)
     print('Weapon: ')
-    print(super1.weapon)
+    print("\t",super1.weapon)
 
     super2 = Superhero
     super2.name = "Hawkeye"
@@ -61,9 +50,9 @@ def main():
     print('Found Avenger Bio:')
     print(super2.name,'(',super2.identity,')',':')
     print('Abilities:')
-    print(super2.power)
+    print("\t",super2.power)
     print('Weapon: ')
-    print(super2.weapon)
+    print("\t",super2.weapon)
 
     super3 = Superhero
     super3.name = "Captain America"
@@ -73,9 +62,9 @@ def main():
     print('Found Avenger Bio:')
     print(super3.name,'(',super3.identity,')',':')
     print('Abilities:')
-    print(super3.power)
+    print("\t",super3.power)
     print('Weapon: ')
-    print(super3.weapon)
+    print("\t",super3.weapon)
 
     super4 = Superhero
     super4.name = "SpiderMan"
@@ -85,8 +74,16 @@ def main():
     print('Found Avenger Bio:')
     print(super4.name,'(',super4.identity,')',':')
     print('Abilities:')
-    print(super4.power)
+    print("\t",super4.power)
     print('Weapon: ')
-    print(super4.weapon)
+    print("\t",super4.weapon)
+
+
+    print('Roster: ')
+
+    print("[Leader]",super3.name)
+    print(super2.name)
+    print(super1.name)
+    print(super4.name)
 
 main()

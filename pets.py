@@ -1,4 +1,5 @@
 CALORIES_PER_POUND = 30000
+CALORIES_PER_MILE = 100
 
 class Pet:
     __slots__ = ['__name', '__species', '__weight', '__fur_color', '__age']
@@ -17,7 +18,7 @@ class Pet:
 
     def walk(self,miles):
 
-        self.__weight += miles*100/3000
+        self.__weight += miles*CALORIES_PER_MILE/CALORIES_PER_POUND
 
     def get_name(self):
         return self.__name

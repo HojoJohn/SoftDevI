@@ -9,7 +9,8 @@ def fusion(a_list):
             copy.append(sorted_list[i])
         else:  
 
-            mydict.update(copy)
+            mydict[copy] = len(copy)
+            copy.clear
 
 
     
