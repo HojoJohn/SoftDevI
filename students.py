@@ -54,10 +54,18 @@ class Student:
         student.id = id
         student.name = name
         return student
-    def add_course(id,name):
+    def add_course(self,id,name, course):
         student = make_student(id, name)
         self.__course += [course]
+        self.__credits += course.get_credit()
+
+    """
+    def add_course(self,course):
+    
+        self.__courses += [course]
         self.__credits += course.get_credits()
+    
+    """
     def get_student(id,population):
 
         if id in population:

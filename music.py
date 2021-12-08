@@ -28,6 +28,15 @@ class Song:
         self.__title = title
         self.__artist = artist
         self.__duration = duration
+    
+    def get_title(self):
+        return self.__title
+    def get_artist(self):
+        return self.__artist
+    
+    def print_song(self):
+        print("Song:", "Artist: ",self.__artist, "Title: ", self.__title)
+    
 
 class Album:
 
@@ -37,6 +46,35 @@ class Album:
         self.__title = title
         self.__artist = artist
         self.__tracks = tracks
+        self.__duration = 0
+    
+    def add_song(album):
+
+        s = Song
+        s.print_song += [album]
+    
+    def album():
+        print(Album.add_song())
+
+    
+    def get_durations(self):
+
+        total_duration = 0
+
+        for duration in self.__duration:
+            total_duration += duration
+
+            duration  += self.__duration + Time.self.__duration
+        
+        return duration
+    
+    def print_album():
+
+        print("Album: ")
+        print(Album.album)
+        print("Total Duration: ")
+        print(Album.get_durations)
+        
 
 def main():
 
@@ -51,6 +89,8 @@ def main():
     s.__title = "Purple"
     s.__duration = 4
     print(s.__title,s.__artist,s.__duration)
+
+    print(Album.print_album)
     
 
 main
