@@ -30,14 +30,43 @@ class Car:
     
     def driver_up(self,miles):
 
-        max_miles = self.__fuel = 
+        max_miles = self.__fuel =  MPG
         
         if miles > max_miles:
             miles = max_miles
         
         self.__mileage += miles
 
-        self.__fuel -= miles
+        self.__fuel -= miles / MPG
+
+    def __repr__(self):
+
+        return "Car:\n" + \
+            "\tVIN = " + self.__VIN + "\n" + \
+            "\tMake = " + self.__make + '\n' + \
+            "\tModel = " + self.__model + "\n" 
+    
+    def __str__(self):
+
+        return "Car VIN=" + self.__VIN + ", make=" + self.__make
+    
+    def __eq__(self, other):
+
+        if type(self) != type(other):
+            return False
+        
+        return self.__VIN == other.__VIN
+    
+    def __ne__(self,other):
+        return not self.__eq__(other)
+    
+    def __lt__(self,other):
+        if type(self) != type(other):
+            return False
+        return self.__VIN < other.__VIN
+    
+    def __hash__(self):
+        return hash(self.__VIN)
 
 
             

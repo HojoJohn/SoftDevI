@@ -35,8 +35,17 @@ def create_particles(max_coordinates):
     return sety
 
 def build_dict_xy(a_set):
+    """
     a_set = [x,y]
     for i in range(0, len(a_set[i])):
-        return tuple[x,y,z]
+        return tuple[x,y,z]"""
+
+def main():
+    a_list = [3,4,6,3,2,1,5]
+
+    fusion(a_list)
+    create_particles(100)
+
+main
 
         
